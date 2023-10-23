@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+*{
+	margin:0;
+	padding: 0;
+}
+.sidebar{
+	background: lightgrey;
+	width:20vw;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	height:100vh;
+
+}
+.sidebar nav{
+	padding:40px;
+
+}
+.sidebar nav li{
+	list-style: none;
+	font-size: 30px;
+	padding :33px 0;
+
+}
+.sidebar nav li a{
+	text-decoration: none;
+	color: black;
+
+}
+.main{
+	/*background-color: yellow;*/
+	width:90vw;
+}
+.container{
+	display: flex;
+}
+.infocontainer{
+	background-color:rgb(202,9,128);
+	height:58vh;
+	width:80vw;
+	display: flex;
+	margin:144px auto;
+	justify-content: space-around;
+}
+
+.devPic img{
+	width:23vw;
+	height:58vh;
+	justify-content: space-around;
+	
+}
+.devInfo{
+	height:58vh;
+	display:flex;
+	flex-direction: column;
+	align-items:left;
+	justify-content: center;
+}
+.hello{
+	font-size: 75px;
+
+
+}
+.name{
+	font-size: 50px;
+    font-weight: bold;
+}
+.profession{
+	font-size: 35px;
+}
+.buttons button{
+  padding: 9px;
+  border-radius: 22px;
+  color: antiquewhite;
+  background-color: dodgerblue;
+  font-weight: bold;
+  font-size: 21px;
+  margin:03px;
+  cursor: pointer;
+}
+.buttons button:hover{
+  background-color: white;
+  color: dodgerblue;
+
+}
+.contactform{
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+	padding:144px;
+	font-weight: bold;
+
+}
+.contactform h1{
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+	font-weight: bold;
+	padding: 12px;
+
+}
+.contactform form div{
+	padding:10px 0;
+	display:flex;
+	flex-direction: column;
+}
+.contactform form  div input{
+	width: 26vw;
+	border-radius: 5px;
+	margin:6px 0;
+	padding:3px;
+	
+}
+#emailHelp{
+	font-size: 15px;
+	color: dodgerblue;
+	margin:0 5px;
+	padding: 3px 0 0 0 0;
+
+}
+#form-check{
+	flex-direction: row;
+}
+#form-check input{
+ width: 24px;
+ margin:3px 0;
+}
+.contactform form  name input{
+	width:20px;
+	border-radius: 5px;
+}
+.contactform button{
+	 padding: 9px;
+  border-radius: 25px;
+  color: antiquewhite;
+  background-color: dodgerblue;
+  font-weight: bold;
+  font-size: 18px;
+  margin:03px;
+  cursor: pointer;
+
+}
+.contactform button:hover{
+	background-color: white;
+  color: dodgerblue;
+}
+.skillscontainer {
+	margin: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+.skillscontainer skillstags h2{
+	margin:20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+.skillscontainer nav li{
+	list-style: none;
+	font-size: 30px;
+	font-weight: bold;
+}
+.skillscontainer nav li a{
+	text-decoration: revert-layer;
+	
+}
+.main p{
+	padding :10px;
+	margin:20px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+.Pic img{
+	width:15vw;
+	height:25vh;
+	display:flex;
+	margin-right:5px;
+ 
+}
+.Pic1 img{
+	width:15vw;
+	height:25vh;
+	display:inline;
+	margin-right:5px;
+  
+}
+.Pic2 img{
+	width:15vw;
+	height:25vh;
+	display:inline;
+	margin-right:5px;
+	
+}
+.Pic3 img{
+	width:15vw;
+	height:25vh;
+	display:inline;
+	margin-right:5px;
+	
+}
+.Pic4 img{
+	width:15vw;
+	height:25vh;
+	display: inline;
+  margin-right: 5px;
+
+}
