@@ -1,2 +1,3 @@
-# first.demo
-this is  my first repo.
+#smart talks
+this is a internship of smart talks
+
