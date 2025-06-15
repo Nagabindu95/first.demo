@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me – Naga Bindu</title>
+
+  <!-- global theme file -->
+  <link rel="stylesheet" href="css/style1.css" />
+
+  <style>
+    :root {
+      --accent-1: #4e8aff;
+      --accent-2: #845ef7;
+      --bg-1: #121212;
+      --text-main: #e7e7e7;
+      --text-faded: #b5b5b5;
+    }
+    body {
+      margin: 0;
+      background: var(--bg-1);
+      color: var(--text-main);
+      font-family: "Segoe UI", Roboto, sans-serif;
+      padding-top: 72px; /* leave space for fixed nav */
+    }
+
+    /* ===== Top nav reused from skills page ===== */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 14px 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.25s, background 0.25s, color 0.25s;
+      text-decoration: none;
+    }
+    .nav-btn:hover {
+      background: #fff;
+      color: var(--accent-1);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ===== Hero section ===== */
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(78, 138, 255, 0.15), rgba(132, 94, 247, 0.15));
+      clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-faded);
+      margin-top: 0.8rem;
+      max-width: 720px;
+      margin-inline: auto;
+    }
+
+    /* ===== About grid ===== */
+    .about {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .about img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-1);
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+    .about-text h2 {
+      color: var(--accent-1);
+      margin-top: 0;
+    }
+    .about-text p {
+      line-height: 1.6;
+    }
+
+    /* ===== Quick stats ===== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .stat {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s;
+    }
+    .stat:hover { transform: translateY(-6px); }
+    .stat h3 { margin: 0 0 6px; color: var(--accent-2); }
+    .stat p { margin: 0; font-size: 0.9rem; color: var(--text-faded); }
+
+    /* ===== CTA buttons ===== */
+    .cta {
+      text-align: center;
+      margin: 50px 0 80px;
+    }
+    .cta .nav-btn { font-size: 0.95rem; margin: 0 10px; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .about { grid-template-columns: 1fr; text-align: center; }
+      .about img { max-width: 200px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Nav ===== -->
+  <nav class="top-nav">
+    <a class="nav-btn" href="home.html">Home</a>
+    <a class="nav-btn" href="intro.html">My Intro</a>
+    <a class="nav-btn" href="skills.html">Skills</a>
+    <a class="nav-btn" href="contact.html">Contact Me</a>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div>
+      <h1>P. Naga Bindu</h1>
+      <p>AI Undergraduate • Front‑End Enthusiast • Aspiring Entrepreneur</p>
+    </div>
+  </section>
+
+  <!-- ===== About / Bio ===== -->
+  <section class="about" id="about">
+    <img src="./images/bg1.jpg" alt="Naga Bindu portrait" />
+
+    <div class="about-text">
+      <h2>Hello, I’m Bindu!</h2>
+      <p>
+        I’m currently pursuing my B.Tech in <strong>Artificial Intelligence</strong> at <em>Anurag University</em>.
+        Beyond academics, I’m a multi‑disciplinary creator—I code, sing, dance, paint and design.
+        My curiosity drives me to explore how technology and art intersect, and my long‑term dream is to build my own
+        products that empower people through intuitive design.
+      </p>
+      <p>
+        Quick learner, always up for a challenge, and never shy to pick up a new language—be it Python, java ,js or the
+        language of dance.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Quick Stats ===== -->
+  <section class="about" style="padding-top:0;">
+    <div class="stats">
+      <div class="stat">
+        <h3>2026</h3>
+        <p>Expected Graduation</p>
+      </div>
+      <div class="stat">
+        <h3>5+</h3>
+        <p>Languages Learned</p>
+      </div>
+      <div class="stat">
+        <h3>3+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat">
+        <h3>∞</h3>
+        <p>Ideas Brewing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta">
+    <a class="nav-btn" href="./resume2.pdf" target="_blank">View Resume</a>
+    <a class="nav-btn" href="https://www.linkedin.com/in/pasupuleti-naga-bindu-b150a5272/">Let’s Connect</a>
+  </div>
+</body>
+</html>

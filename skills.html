@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills &amp; Projects – Naga Bindu</title>
+
+  <!-- Core dark‑theme stylesheet -->
+  <link rel="stylesheet" href="css/style1.css" />
+
+  <!-- Page‑specific overrides -->
+  <style>
+    /* === Global look & feel === */
+    :root {
+      --accent-1: #4e8aff;
+      --accent-2: #845ef7;
+      --bg-1: #121212;
+      --bg-2: #1e1e1e;
+      --text-main: #e0e0e0;
+      --text-faded: #b3b3b3;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-1);
+      color: var(--text-main);
+      /* leave space for the fixed nav */
+      padding-top: 72px;
+    }
+
+    /* === Top navigation === */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 14px 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.25s, color 0.25s, background 0.25s;
+      text-decoration: none;
+    }
+    .nav-btn:hover {
+      background: #fff;
+      color: var(--accent-1);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* === Main wrappers === */
+    .skillscontainer,
+    .projectscontainer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    h1,
+    h3 {
+      color: var(--accent-1);
+      margin: 0 0 12px;
+    }
+
+    /* certificate gallery */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .cert-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+    .cert-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* project cards */
+    .projectscontainer {
+      background: var(--bg-2);
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #262626;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      filter: brightness(0.85);
+      transition: filter 0.3s;
+    }
+    .project-card:hover img {
+      filter: brightness(1);
+    }
+    .p-body {
+      flex: 1;
+      padding: 20px;
+    }
+    .project-card h4 {
+      color: var(--accent-1);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-faded);
+    }
+    .project-card a button {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      border: none;
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 18px 0 12px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .project-card a button:hover {
+      background: #fff;
+      color: var(--accent-1);
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    /* Responsive text */
+    @media (max-width: 500px) {
+      .nav-btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Top Navigation (buttons) ===== -->
+  <nav class="top-nav">
+    <a class="nav-btn" href="home.html">Home</a>
+    <a class="nav-btn" href="index.html">My Intro</a>
+    <a class="nav-btn" href="skills.html">Skills</a>
+    <a class="nav-btn" href="contact.html">Contact Me</a>
+  </nav>
+
+  <!-- ===== Skills & Certificates ===== -->
+  <section class="skillscontainer" id="skills">
+    <h1>Skills &amp; Certificates</h1>
+
+    <p style="margin-top:1rem; line-height:1.6;">
+      I possess a diverse skill set in programming and web development:
+      <strong>C, C++</strong> for low‑level control, <strong>Python</strong> &amp; <strong>Java</strong> for cross‑platform apps,
+      modern web stacks (<strong>HTML, CSS, JavaScript, TypeScript</strong>), desktop UI with <strong>PyQt5</strong>,
+      computer‑vision using <strong>OpenCV</strong>, and full‑stack work with <strong>Django</strong> plus other backend tools.
+    </p>
+
+    <h3 style="margin-top:2rem;">Highlighted Certificates</h3>
+    <div class="cert-grid">
+      <img src="images/image1.jpg" alt="Certificate 1" />
+      <img src="images/img2.jpg" alt="Certificate 2" />
+      <img src="images/python.jpg" alt="Python Certificate" />
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section class="projectscontainer" id="projects">
+    <h1>Projects</h1>
+    <div class="project-grid">
+      <!-- === Project 1 === -->
+      <div class="project-card">
+        <img src="images/calci.png" alt="Calculator Screenshot" />
+        <div class="p-body">
+          <h4>Calculator</h4>
+          <p>A fully‑functional calculator built with vanilla HTML, CSS and JavaScript.</p>
+          <a href="https://nagabindu95.github.io/OIBSIP/task1/" target="_blank"><button>View Project</button></a>
+        </div>
+      </div>
+
+      <!-- === Project 2 === -->
+      <div class="project-card">
+        <img src="images/login.png" alt="Login Auth Screenshot" />
+        <div class="p-body">
+          <h4>Login Authentication</h4>
+          <p>Secure login &amp; registration flow with clean UI and localStorage‑based persistence.</p>
+          <a href="https://nagabindu95.github.io/OIBSIP/task2/" target="_blank"><button>View Project</button></a>
+        </div>
+      </div>
+
+      <!-- === Project 3 === -->
+      <div class="project-card">
+        <img src="images/tata.png" alt="Web page screenshot" />
+        <div class="p-body">
+          <h4>Multi‑Section Web Page</h4>
+          <p>Responsive landing page with smooth scrolling, hero section, and contact form.</p>
+          <a href="https://nagabindu95.github.io/OIBSIP/task3/" target="_blank"><button>View Project</button></a>
+        </div>
+      </div>
+
+      <!-- === Project 4 === -->
+      <div class="project-card">
+        <img src="images/todo.png" alt="Todo Screenshot" />
+        <div class="p-body">
+          <h4>Todo‑List App</h4>
+          <p>Simple CRUD todo app with localStorage; add, check and delete tasks.</p>
+          <a href="https://nagabindu95.github.io/OIBSIP/task4/" target="_blank"><button>View Project</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
