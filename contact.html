@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WELCOME TO MY WEBSITE...!</title>
+  <link rel="stylesheet" href="./style1.css">
+
+  <style>
+    .contactform {
+      max-width: 600px;
+      background: #1e1e1e;
+      color: #fff;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+
+    .contactform h1 {
+      color: #4e8aff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #ccc;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #4e8aff;
+      outline: none;
+    }
+
+    .form-check {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-check input {
+      transform: scale(1.2);
+    }
+
+    .btn-primary {
+      margin-top: 20px;
+      background: #4e8aff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: white;
+      color: #4e8aff;
+    }
+
+    .form-text {
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="index.html">MY INTRO</a></li>
+          <li><a href="skills.html">SKILLS</a></li>
+          <li><a href="contact.html">CONTACT ME</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main">
+      <div class="contactform">
+        <h1>Contact Me</h1>
+        <form>
+          <div class="form-group">
+            <label for="clientName">Name</label>
+            <input type="text" id="clientName" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="clientEmail">Email Address</label>
+            <input type="email" id="clientEmail" placeholder="example@email.com">
+            <div class="form-text">We'll never share your email or phone number with anyone else.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone">Phone</label>
+            <input type="tel" id="clientPhone" placeholder="+91-XXXXXXXXXX">
+          </div>
+
+          <div class="form-group">
+            <label for="clientQuery">Enquiry</label>
+            <input type="text" id="clientQuery" placeholder="Type your enquiry here">
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="isClient">
+            <label for="isClient">I want you to work on a project with me</label>
+          </div>
+
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

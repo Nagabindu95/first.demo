@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #1a1a1a;
+  color: white;
+  width: 20vw;
+  padding-top: 40px;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar nav ul li {
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background: #4e8aff;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.main {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.infocontainer, .skillscontainer, .contactform {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  margin: 20px auto;
+  width: 90%;
+}
+
+.devInfo .hello {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.devInfo .name {
+  font-size: 36px;
+  color: #4e8aff;
+  font-weight: bold;
+}
+
+.devInfo .profession {
+  font-size: 24px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.buttons button {
+  background: #4e8aff;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #fff;
+  color: #4e8aff;
+  transform: scale(1.05);
+}
+
+.devPic img {
+  width: 300px;
+  height: auto;
+  border-radius: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.devPic img:hover {
+  transform: scale(1.1);
+}
+
+.contactform input, .contactform textarea {
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border: 2px solid #4e8aff;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contactform button {
+  background-color: #4e8aff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.contactform button:hover {
+  background-color: white;
+  color: #4e8aff;
+  border: 2px solid #4e8aff;
+}
+
+.Pic img,
+.Pic1 img,
+.Pic2 img,
+.Pic3 img,
+.Pic4 img {
+  width: 15vw;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.Pic img:hover,
+.Pic1 img:hover,
+.Pic2 img:hover,
+.Pic3 img:hover,
+.Pic4 img:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .devPic img {
+    width: 80%;
+  }
+}
+
+/* 3D Card Flip */
+.card3d {
+  width: 200px;
+  height: 250px;
+  perspective: 1000px;
+  margin: 20px;
+  position: relative;
+}
+
+.card3d > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 250px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-front {
+  background: #4e8aff;
+}
+
+.card-back {
+  background: #333;
+  transform: rotateY(180deg);
+}
+
+.card3d:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card3d:hover .card-back {
+  transform: rotateY(360deg);
+}
+.devPic img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  border: 4px solid #4e8aff; /* 🔵 Blue border */
+}
+
+.devPic img:hover {
+  transform: scale(1.05);
+}
+.infocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+}
+
+.devInfo {
+  background-color: #1f1f1f;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hello {
+  font-size: 1.2rem;
+  color: #4e8aff;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.profession {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.buttons button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4e8aff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #fff;
+  color: #4e8aff;
+  border: 1px solid #4e8aff;
+}
+
+.devPic img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border: 4px solid #4e8aff; /* Blue border */
+  transition: transform 0.3s;
+}
+
+.devPic img:hover {
+  transform: scale(1.05);
+}
+
+
